@@ -8,4 +8,4 @@ The project is an introduction to concurrency in Java, using multiple threads fo
 
 ## Build status
 
-The project doesn't run as intendend, because multithreading is hard.
+The project doesn't run as intended, because multithreading is hard.
