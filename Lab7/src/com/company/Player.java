@@ -2,6 +2,11 @@ package com.company;
 
 import java.util.*;
 
+/**
+ * class Player manages the action of players
+ *
+ */
+
 public class Player implements Runnable {
     private List<Token> tokens = new ArrayList<>();
     private String name;
@@ -21,6 +26,11 @@ public class Player implements Runnable {
         return name;
     }
 
+    /**
+     * function to chech if the game is on
+     * @return
+     */
+
     private boolean gameIsOn() {
         if (board.getNumberOfRemainingTokens() <= 0) {
             return false;
@@ -30,6 +40,12 @@ public class Player implements Runnable {
         }
         return true;
     }
+
+    /**
+     * function that checks if the current player
+     * has tokens that represent a arithmetic progression
+     * @return
+     */
 
     private boolean playerHasProgression() {
         Collections.sort(tokens, new TokenComparator());
@@ -54,6 +70,11 @@ public class Player implements Runnable {
         }
         return aux;
     }
+
+    /**
+     * override function run for the multithreading
+     * and manages the players tokens
+     */
 
     @Override
     public void run() {

@@ -2,6 +2,11 @@ package com.company;
 
 import java.util.*;
 
+/**
+ * class Board manages a group of tokens
+ * and the interaction with the players
+ */
+
 public class Board {
     private List<Token> tokens = Collections.synchronizedList(new ArrayList<Token>());
     private boolean available = false;
@@ -17,6 +22,12 @@ public class Board {
         }
     }
 
+    /**
+     * function to generate the numbers for the tokens and board
+     * @param m
+     * @return
+     */
+
     private ArrayList<Integer> generateNumbersForTokens(int m){
         ArrayList<Integer> aux = new ArrayList<Integer>();
         for (int i = 0; i <= m; i++) {
@@ -24,6 +35,7 @@ public class Board {
         }
         return aux;
     }
+
 
     public void setTokens(List<Token> tokens) {
         this.tokens = tokens;
@@ -36,6 +48,14 @@ public class Board {
     public int getNumberOfRemainingTokens() {
         return tokens.size();
     }
+
+    /**
+     * synchronized function for the multithreading
+     * that returns a token to the player
+     * @param i
+     * @return
+     * @throws InterruptedException
+     */
 
     public synchronized Token getToken(int i) throws InterruptedException {
         wait();

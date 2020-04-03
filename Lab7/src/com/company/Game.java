@@ -1,5 +1,11 @@
 package com.company;
 
+/**
+ * class Game initialises everything
+ * and starts the game
+ *
+ */
+
 public class Game {
 
     public Game(String player1Name, String player2Name, int n, int m){

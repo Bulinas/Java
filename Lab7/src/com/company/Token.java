@@ -1,5 +1,12 @@
 package com.company;
 
+/**
+ * class Token retains a number
+ * that is the value of the token
+ * 0 is for the blank
+ *
+ */
+
 public class Token {
     private int number;
 
