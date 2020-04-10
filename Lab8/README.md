@@ -8,7 +8,7 @@ The project is an introduction to database work in java.
 
 ## Build status
 
-Compulsory done succesful
+Compulsory done succesfully.
 
 ## Notes
 
